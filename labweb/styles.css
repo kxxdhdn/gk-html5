@@ -1,0 +1,33 @@
+/* styles.css */
+
+.header-content {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.profile-photo {
+    width: 100px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: for a circular photo */
+    margin-right: 20px; /* Adjust spacing */
+}
+
+.header-text {
+    display: inline-block; /* Align text next to the photo */
+    flex-grow: 1; /* Allow the header text to take up remaining space */
+}
+
+/* Style for tables */
+table {
+    width: 100%; /* Make table fill its container */
+    border-collapse: collapse; /* Collapse border spacing */
+}
+
+table, th, td {
+    border: 1px solid black; /* Add border */
+}
+
+th, td {
+    padding: 8px; /* Add padding */
+    text-align: left; /* Align text to the left */
+}
