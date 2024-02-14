@@ -1,0 +1,36 @@
+<html>
+
+<head>
+
+    <script language="javascript" type="text/javascript">
+        function choix() {
+            var choix = "";
+            if (document.languages.langage[0].checked) {
+                choix +=  document.languages.langage[0].value;
+            }
+            if (document.languages.langage[1].checked) {
+                choix +=  document.languages.langage[1].value;
+            }
+            if (document.languages.langage[2].checked) {
+                choix += document.languages.langage[2].value;
+            }
+            alert("Vous préférez : "+choix);
+        }
+    </script>
+
+</head>
+
+<body>
+    <form name="languages">
+        <input type="radio" name="langage" value="html" />HTML
+        <br />
+        <input type="radio" name="langage" value="css" />CSS
+        <br />
+        <input type="radio" name="langage" value="javascript" />Javascript
+        <br />
+        <input type="button" value="Choisir" onclick="choix()" />
+    </form>
+</body>
+
+
+</html>

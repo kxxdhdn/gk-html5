@@ -1,0 +1,31 @@
+<html>
+
+<head>
+
+    <script language="javascript" type="text/javascript">
+        function choix() {
+            var index = document.forms[0].repas.selectedIndex;
+            var selectedText = document.forms[0].repas.options[index].text;
+            var selectedValue = document.forms[0].repas.options[index].value;
+
+            alert("Indice = "+index + " Text = "+selectedText + " Value = "+selectedValue);
+        }
+    </script>
+
+</head>
+
+<body>
+    <form>
+        <select name="repas">
+            <option value="pizza">Pizza</option>
+            <option value="viande">Viande</option>
+            <option value="poisson">Poisson</option>
+        </select>
+
+
+        <input type="button" value="Choisir" onclick="choix()" />
+    </form>
+</body>
+
+
+</html>

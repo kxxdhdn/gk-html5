@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript</title>
+    <script>
+        function CalculScore() {
+            var compteur = 0;  // sauvegarder le nombre de cases cochées
+            var score = 0;
+
+            // version 1 avec different name du checkbox
+            /*
+            if (document.forms[0].case1.checked) {    // compteur = 1; score = -8
+                compteur++;
+                score = score+ Number(document.forms[0].case1.value);
+            }
+            if (document.forms[0].case2.checked) {    // compteur = 2, score = -3
+                compteur++;
+                score += Number(document.forms[0].case2.value);
+            }
+            if (document.forms[0].case3.checked) {  // compteur = 3, score = 0
+                compteur++;
+                score += Number(document.forms[0].case3.value);
+            }
+
+            if (document.forms[0].case4.checked) {
+                compteur++;
+                score += Number(document.forms[0].case4.value);
+            }
+            if (document.forms[0].case5.checked) {
+                compteur++;
+                score += Number(document.forms[0].case5.value);
+            }
+            if (document.forms[0].case6.checked) {
+                compteur++;
+                score += Number(document.forms[0].case6.value);
+            }
+
+            if (document.forms[0].case7.checked) {
+                compteur++;
+                score += Number(document.forms[0].case7.value);
+            }
+            if (document.forms[0].case8.checked) {
+                compteur++;
+                score += Number(document.forms[0].case8.value);
+            }
+            if (document.forms[0].case9.checked) {
+                compteur++;
+                score += Number(document.forms[0].case9.value);
+            }
+            if (document.forms[0].case10.checked) {
+                compteur++;
+                score += Number(document.forms[0].case10.value);
+            }
+             */
+
+            //version avec le même name
+
+            for(var i = 0; i< document.forms[0].case.length;i++)
+            {
+                if (document.forms[0].case[i].checked) {
+                    compteur++;
+                    score += Number(document.forms[0].case[i].value);
+                }
+
+            }
+            if (compteur == 3) {
+                if (score >= 15) { alert("Vous êtes déjà un joueur expert, Votre score est = " + score); }
+                else {
+                    alert("Vous êtes encore un joueur débutant , Votre score est = " + score);
+                }
+
+                var input = document.getElementById("inputScore"); // récupération de l'objet input
+                input.value = score;
+            }
+            else {
+                alert("Nombre de cases choisi invalide, choisissez 3 CASES");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1 align="center">Jeu : Mon Score</h1>
+
+    <!-- Exercice calculScore -->
+
+    <form>
+        <div align="center">
+            <fieldset style="width: 20%;">
+                <legend>Cocher 3 cases</legend>
+                <table align="left">
+                    <tr>
+                        <td><input type="checkbox" name="case" value="-8" /></td>
+                        <td>Case 1</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="case" value="5" /></td>
+                        <td>Case 2</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="case" value="3" /></td>
+                        <td>Case 3</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="case" value="10" /></td>
+                        <td>Case 4</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="case" value="0" /></td>
+                        <td>Case 5</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="case" value="-1" /></td>
+                        <td>Case 6</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="case" value="-7" /></td>
+                        <td>Case 7</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="case" value="15" /></td>
+                        <td>Case 8</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="case" value="8" /></td>
+                        <td>Case 9</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="case" value="3" /></td>
+                        <td>Case 10</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Score" onclick="CalculScore()" /></td>
+                    </tr>
+                    <tr>
+                        <td>Score : </td>
+                        <td><input type="text" id="inputScore" value=""/></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+
+      
+    </form>
+
+   
+
+</body>
+
+</html>
