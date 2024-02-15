@@ -1,0 +1,15 @@
+.cadre{
+    border: 2px red solid;
+}
+
+h1 {
+    color: red
+}
+
+li {
+    color: blue
+}
+
+#title{
+    border:4px green dotted
+}

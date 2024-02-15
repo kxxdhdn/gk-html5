@@ -58,15 +58,27 @@ function choisir() {
 
 function jouer() {
     var score = 0;
-    var checkboxes = document.forms["gameForm"];
-    
-    for (var checkbox of checkboxes) {
+    var checkedCount = 0;
+    var checkboxes = document.forms["gameForm"].querySelectorAll("input[type=checkbox]");
+
+    checkboxes.forEach(function(checkbox) {
         if (checkbox.checked) {
             score += parseInt(checkbox.value);
+            checkedCount++;
         }
-    };
-                       
+    });
+
+    if (checkedCount !== 3) {
+        alert("Veuillez cocher exactement trois cases.");
+        return;
+    }
 
     // document.getElementById("score").textContent = `Score du jeu: ${score}`;
     document.getElementById("score").value = score;
+
+    if (score > 15) {
+        alert("Vous êtes déjà un joueur expert.");
+    } else {
+        alert("Vous êtes encore un joueur débutant.");
+    }
 }

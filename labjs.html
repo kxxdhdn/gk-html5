@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Labs JavaScript</title>
+
+    <script src="labjs.js"></script>
+  </head>
+
+  <body>
+    <!-- Exo 1 -->
+
+    <!-- <script> -->
+    <!--   var nom = prompt("Votre nom : "); -->
+    <!--   var prenom = prompt("Votre prénom : "); -->
+    <!--   var age = prompt("Votre âge : "); -->
+
+    <!--   // Affichage dans alert -->
+    <!--   alert("Nom : " + nom + "\nPrénom : " + prenom + "\nÂge : " + age); -->
+
+    <!--   // Affichage dans document -->
+    <!--   document.write("<p>Nom : " + nom + "\nPrénom : " + prenom + "\nÂge : " + age + "</p>"); -->
+
+    <!--   // Affichage dans console -->
+    <!--   console.log("Nom : " + nom); -->
+    <!--   console.log("Prénom : " + prenom); -->
+    <!--   console.log("Âge : " + age); -->
+    <!-- </script> -->
+
+
+
+    <!-- Exo 2 -->
+
+    <!-- Méthode 1 -->
+    <button onclick="calculerSomme()">[Popup] Calculer la somme</button>
+    <br><br>
+
+    <!-- Méthode 2 -->
+    <label for="input1">Entrer un premier nombre : </label>
+    <input id="input1" type="number" value="" />
+    <br>
+    <label for="input2">Entrer un deuxième nombre : </label>
+    <input id="input2" type="number" value="" />
+    <br>
+    <button onclick="somme()">Calculer la somme</button>
+    <br>
+    La somme des deux nombres :
+    <input id="result" type="number" value="" />
+    <br><br>
+    <br><br>
+
+
+
+    <!-- Exo 5 -->
+
+    <form name="cinForm">
+      <label for="nom">Nom : </label>
+      <input id="nom" name="nom" type="text" value=""/>
+      <br><br>
+      <label for="cin">CIN : </label>
+      <input id="cin" name="cin" type="number" value=""/>
+      <br><br>
+      <button onclick="valider()">Valider</button>
+      <br><br>
+    </form>
+    <br><br>
+
+
+
+    <!-- Exo 6 -->
+
+    <form name="checkForm">
+      Je maîtrise : 
+      <br>
+      <input type="checkbox" id="op1" name="lang" value="HTML">
+      <label for="op1">HTML</label><br>
+      <input type="checkbox" id="op2" name="lang" value="CSS">
+      <label for="op2">CSS</label><br>
+      <input type="checkbox" id="op3" name="lang" value="JavaScript">
+      <label for="op3">JavaScript</label><br>
+      <button onclick="choisir()">Choisir</button>
+    </form>
+    <br><br>
+
+
+
+    <!-- Exo 7 -->
+
+    <form name="gameForm">
+      Veuillez cocher trois cases : <br>
+      <hr/>
+      <input type="checkbox" name="Case1" value="-8"/> Case 1 <br/>
+      <input type="checkbox" name="Case2" value="5"/> Case 2 <br/>
+      <input type="checkbox" name="Case3" value="3"/> Case 3 <br/>
+      <input type="checkbox" name="Case4" value="10"/> Case 4 <br/>
+      <input type="checkbox" name="Case5" value="0"/> Case 5 <br/>
+      <input type="checkbox" name="Case6" value="-1"/> Case 6 <br/>
+      <input type="checkbox" name="Case7" value="-7"/> Case 7 <br/>
+      <input type="checkbox" name="Case8" value="15"/> Case 8 <br/>
+      <input type="checkbox" name="Case9" value="8"/> Case 9 <br/>
+      <input type="checkbox" name="Case10" value="3"/> Case 10 <br/>
+      <hr/>
+      <button onclick="jouer(); return false;">Calculer le score du jeu</button><br><br>
+      <!-- <p id="score"></p> -->
+      Score du jeu :
+      <input id="score" type="number" value="" />
+    </form>
+    
+  </body>
+
+</html>
